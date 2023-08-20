@@ -1,14 +1,14 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+
+
 import GuessedWord from '@/components/GuessedWord'
 import Hangman from '@/components/Hangman'
 import Keyboard from '@/components/Keyboard'
 
 
 
-import Contacte from '@/components/Contacte'
 
-const inter = Inter({ subsets: ['latin'] })
+
+
 
 export default function Home() {
   return (
@@ -29,10 +29,8 @@ export default function Home() {
         <Keyboard />
         </div>  
       </section>
-      
-      <section className='w-full h-full' id='contact'>
-        <Contacte />
-      </section>
+
+     
     </main>
   )
 }
