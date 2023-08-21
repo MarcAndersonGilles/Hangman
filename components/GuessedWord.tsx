@@ -17,10 +17,11 @@ function GuessedWord() {
                     {guessedWord.map((key) => {
                         return (
                             <Fragment key={key.id}>
-                                <button className='bg-white  rounded-md shadow-md p-6'
-                                disabled
-                                
-                                >{key.letter}</button>
+                                <button className='bg-transparent border-b-2 border-black  p-4 pb-0 font-bold text-xl'
+                                disabled    
+                                >
+                                    <p className='text-red-500'>{key.letter}</p>
+                                    </button>
                             </Fragment>
                         )
 

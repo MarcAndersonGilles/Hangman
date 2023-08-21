@@ -1,6 +1,7 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState, Fragment, useEffect } from 'react'
 
 function Keyboard() {
+
     const keyboardLetters = [
         { id: 1, letter: 'A', isClicked: false, },
         { id: 2, letter: 'B', isClicked: false, },
@@ -28,18 +29,25 @@ function Keyboard() {
         { id: 24, letter: 'X', isClicked: false, },
         { id: 25, letter: 'Y', isClicked: false, },
         { id: 26, letter: 'Z', isClicked: false, },
-
-
     ]
+
+    
     return (
         <div className='flex flex-col w-full  gap-6 p-4 lg:p-8 m-auto bg-gradient-to-r from-slate-200 to-slate-300 text-black '>
 
             <div className='w-full flex flex-wrap'>
                 <div className='flex flex-wrap justify-center   mb-12 gap-4 '>
                     {keyboardLetters.map((key) => {
+                        const isActived = key.isClicked
                         return (
                             <Fragment key={key.id}>
-                                <button className='bg-white  rounded-md shadow-md p-6'>{key.letter}</button>
+                                <button className={`  rounded-md shadow-md p-6
+                                ${ isActived ? 'bg-red-500' : 'bg-white'}`}
+                                    // onClick={}
+                                
+                               
+                                //    disabled={key.isClicked}
+                                >{key.letter}</button>
                             </Fragment>
                         )
 
